@@ -16,10 +16,10 @@ const optsPOST = {
 }
 
 fastify.post('/isLogged', optsPOST, async function (req, reply) {
-  console.log(req.session.get('user'));
   if (req.session.get('user')) {
     const db = this.mongo.db;
     const query = await db.collection('activeSessions').find({ip:req.ip}).next().catch(err => console.error(err));
+    console.log(query, req.ip);
     if (query && query._id === req.session.get('user')) {
       return { user: query._id, logeado: true };
     } else {
