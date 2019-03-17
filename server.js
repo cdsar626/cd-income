@@ -14,10 +14,6 @@ const fastify = prefastify({
     level: 'warn',
     //file: 'logs.txt',
   },
-  http2: true,
-  https: {
-    allowHTTP1: true,
-  }
 });
 fastify.register(mongodb, {
   // force to close the mongodb connection when app stopped
