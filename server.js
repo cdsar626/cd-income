@@ -5,6 +5,7 @@ const routesLoader = require('fastify-loader'); // load all routes from director
 const compress = require('fastify-compress'); // compress responses
 const helmet = require('fastify-helmet'); // Important security headers
 const mongodb = require('fastify-mongodb'); // mongodb driver
+const cookieSess = require('fastify-secure-session');
 const prefastify = require('fastify');
 const sslRedirect = require('heroku-ssl-redirect');
 const { updateCountryData, updateAllCountries } = require('./functions.js');
@@ -34,12 +35,12 @@ fastify.ready(function() {
     console.error(err);
   }
 })
-fastify.register(require('fastify-secure-session'), {
+fastify.register(cookieSess, {
   key: fs.readFileSync(path.join(__dirname, 'key')),
   cookie: {
     maxAge: 60 * 60 * 24 * 3, // 3 days in seconds
     HttpOnly: true,
-    // secure: true,
+    secure: true,
   }
 })
 fastify.register(helmet);
