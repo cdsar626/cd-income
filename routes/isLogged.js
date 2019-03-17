@@ -24,6 +24,7 @@ fastify.post('/isLogged', optsPOST, async function (req, reply) {
       return { user: query._id, logeado: true };
     } else {
       req.session.delete();
+      console.log('deleted cookie');
     }
   }
   return { user:'', logeado: false };
