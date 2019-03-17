@@ -24,21 +24,21 @@
 </template>
 
 <script>
-  export default {
-    name: 'about',
-    data() {
-      return {
-        twitter: '@cdsar626',
-        isT: false,
-        github: 'github.com/cdvsnp',
-        isG: false,
-        linkedin: '/in/cdsar626',
-        isL: false,
-        email: 'cdsar626@gmail.com',
-        isE: false,
-      };
-    },
-  };
+export default {
+  name: 'about',
+  data() {
+    return {
+      twitter: '@cdsar626',
+      isT: false,
+      github: 'github.com/cdvsnp',
+      isG: false,
+      linkedin: '/in/cdsar626',
+      isL: false,
+      email: 'cdsar626@gmail.com',
+      isE: false,
+    };
+  },
+};
 </script>
 
 <style scoped>

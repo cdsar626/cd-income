@@ -6,6 +6,7 @@ const compress = require('fastify-compress'); // compress responses
 const helmet = require('fastify-helmet'); // Important security headers
 const mongodb = require('fastify-mongodb'); // mongodb driver
 const prefastify = require('fastify');
+const sslRedirect = require('heroku-ssl-redirect');
 const { updateCountryData, updateAllCountries } = require('./functions.js');
 
 
@@ -45,6 +46,8 @@ fastify.register(helmet);
 fastify.register(compress);
 fastify.register(static, { root: path.join(__dirname, 'dist'), wildcard: false });
 fastify.register(routesLoader, { paths: ['./routes/*.js'] });
+fastify.register(sslRedirect);
+
 
 fastify.get('/*', (req, reply) => {
   reply.sendFile('index.html');
