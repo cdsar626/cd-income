@@ -1,22 +1,26 @@
 <template>
   <div id="about">
     <a href="https://twitter.com/cdsar626" target="blank">
-      <img alt="logo Twitter" @mouseover="isT=true" @mouseleave="isT=false" class="imgAbout" src="../assets/Twitter.png">
+      <img alt="logo Twitter" @mouseover="isT=true" @mouseleave="isT=false"
+      class="imgAbout" src="../assets/Twitter.png">
       <div v-if="isT">{{twitter}}</div>
     </a>
 
     <a href="https://github.com/cdvsnp" target="blank">
-      <img alt="logo github" @mouseover="isG=true" @mouseleave="isG=false" class="imgAbout" src="../assets/github-256.png">
+      <img alt="logo github" @mouseover="isG=true" @mouseleave="isG=false"
+      class="imgAbout" src="../assets/github-256.png">
       <div v-if="isG">{{github}}</div>
     </a>
 
     <a href="https://www.linkedin.com/in/cdsar626" target="blank">
-      <img alt="logo LinkedIn" @mouseover="isL=true" @mouseleave="isL=false" class="imgAbout" src="../assets/linkedin.png">
+      <img alt="logo LinkedIn" @mouseover="isL=true" @mouseleave="isL=false"
+      class="imgAbout" src="../assets/linkedin.png">
       <div v-if="isL">{{linkedin}}</div>
     </a>
 
     <a href="mailto:cdsar626@gmail.com" target="blank">
-      <img alt="logo email" @mouseover="isE=true" @mouseleave="isE=false" class="imgAbout" src="../assets/email.png">
+      <img alt="logo email" @mouseover="isE=true" @mouseleave="isE=false"
+      class="imgAbout" src="../assets/email.png">
       <div v-if="isE">{{email}}</div>
     </a>
 

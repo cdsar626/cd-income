@@ -29,7 +29,6 @@ fastify.post('/login', optsPOST, async function (req, reply) {
     const query = await db.collection('users').find({
       _id:user,
     }).next().catch(err => console.error(err)) || false;
-    console.log(query);
     if (await bcrypt.compare(pass, query.pass)) { // Si credenciales concuerdan
       // Si hay una sesion activa
       if ( await db.collection('activeSessions')
@@ -65,6 +64,5 @@ fastify.post('/login', optsPOST, async function (req, reply) {
       return 0;
     }
   }
-  console.log(req.body);
   return 0;
 })

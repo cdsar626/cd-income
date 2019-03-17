@@ -186,7 +186,7 @@ export default {
       if (data.user.length === 0 || data.pass.length === 0) {
         this.dataLeftError = true;
         return;
-      } 
+      }
       if (/\s/.test(data.user) || data.pass.length < 8) {
         this.dataError = true;
         return;
