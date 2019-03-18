@@ -41,12 +41,13 @@ fastify.register(cookieSess, {
   cookie: {
     maxAge: 60 * 60 * 24 * 3, // 3 days in seconds
     HttpOnly: true,
-    secure: false,
+    secure: process.env.NODE_ENV === "production",
   }
 })
 fastify.register(helmet);
 fastify.register(compress);
 fastify.register(static, { root: path.join(__dirname, 'dist'), wildcard: false });
+fastify.decorate('env', process.env);
 fastify.register(routesLoader, { paths: ['./routes/*.js'] });
 fastify.register(sslRedirect);
 
