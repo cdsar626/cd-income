@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "cd-income",
+    "short_name": "cd-income",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
     ],
     "theme_color": "#40798c",
     "background_color": "#40798c",
-    "start_url": "https://cd.onmypc.net",
+    "start_url": "https://cd-income.herokuapp.com",
     "display": "standalone"
 }

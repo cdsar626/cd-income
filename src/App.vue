@@ -4,9 +4,9 @@
     <div id="nav">
       <div class="logo"><img src="@/assets/logo_noname.png"></div>
       <ul>
-        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/">Inicio</router-link></li>
         <li><router-link to="/paises">Países</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/about">Acerca</router-link></li>
       </ul>
     </div>
     <div id="wrapper">

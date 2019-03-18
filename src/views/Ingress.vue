@@ -7,7 +7,7 @@
       <div class="botonesUser">
         <span v-if="isLogged"> <i>Has ingresado como {{ user }} <br></i></span>
         <button v-if="!isLogged" @click="showModal(false)">Aportar</button>
-        <button v-if="!isLogged" @click="showModal(true)">Registrar</button>
+        <button v-if="!isLogged" @click="showModal(true)">Registrarse</button>
         <button v-if="isLogged && !goingToAportar" @click="showAportar()">Aportar</button>
         <button v-if="isLogged" @click="logout()">Salir</button>
       </div>
@@ -19,10 +19,10 @@
           <input v-model="user" id="usuario" name="usuario" placeholder="usuario">
 
           <input v-if="goingToRegister" id="password"
-          type="password" name="password" placeholder="password" autocomplete="off">
+          type="password" name="password" placeholder="contraseña" autocomplete="off">
 
           <input v-else @keyup.enter="logear()" id="password" type="password"
-          name="password" placeholder="password" autocomplete="off">
+          name="password" placeholder="contraseña" autocomplete="off">
 
           <input v-if="goingToRegister" @keyup.enter="registrar()" id="email"
           type="email" placeholder="correo">
@@ -39,10 +39,11 @@
 
 
           <input v-if="goingToRegister" type="button" @click="registrar()" name="logginBtn"
-          value="Registrar">
+          value="Registrarse">
 
           <input v-else type="button" @click="logear()" name="logginBtn" value="Ingresar">
-          <a @click.prevent="showModal(true)" class="oReg" v-if="!goingToRegister"><br>registrar</a>
+          <a @click.prevent="showModal(true)" class="oReg" v-if="!goingToRegister">
+          <br>registrarse</a>
         </form>
       </div>
       <div :class="{bgModal:showLoginModal}" @click="hideModal()"></div>
