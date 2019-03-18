@@ -41,7 +41,7 @@ fastify.register(cookieSess, {
   cookie: {
     maxAge: 60 * 60 * 24 * 3, // 3 days in seconds
     HttpOnly: true,
-    secure: true,
+    secure: false,
   }
 })
 fastify.register(helmet);
