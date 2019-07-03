@@ -6,7 +6,7 @@
       <div v-if="isT">{{twitter}}</div>
     </a>
 
-    <a href="https://github.com/cdvsnp" target="blank">
+    <a href="https://github.com/cdsar626" target="blank">
       <img alt="logo github" @mouseover="isG=true" @mouseleave="isG=false"
       class="imgAbout" src="../assets/github-256.png">
       <div v-if="isG">{{github}}</div>
@@ -34,7 +34,7 @@ export default {
     return {
       twitter: '@cdsar626',
       isT: false,
-      github: 'github.com/cdvsnp',
+      github: 'github.com/cdsar626',
       isG: false,
       linkedin: '/in/cdsar626',
       isL: false,
