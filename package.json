@@ -17,26 +17,26 @@
   "dependencies": {
     "axios": "^0.18.1",
     "bcryptjs": "^2.4.3",
-    "country-list": "^2.1.0",
-    "fastify": "^2.15.1",
+    "country-list": "^2.2.0",
+    "fastify": "^2.15.3",
     "fastify-compress": "^0.8.1",
-    "fastify-cookie": "^3.0.2",
-    "fastify-helmet": "^3.0.0",
+    "fastify-cookie": "^3.6.1",
+    "fastify-helmet": "^3.0.2",
     "fastify-loader": "^2.3.7",
     "fastify-mongodb": "^1.0.1",
-    "fastify-secure-session": "^1.0.0",
-    "fastify-static": "^2.3.4",
+    "fastify-secure-session": "^1.2.0",
+    "fastify-static": "^2.7.0",
     "heroku-ssl-redirect": "0.0.4",
-    "vue": "^2.6.6",
-    "vue-axios": "^2.1.4",
-    "vue-router": "^3.0.2"
+    "vue": "^2.6.12",
+    "vue-axios": "^2.1.5",
+    "vue-router": "^3.4.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.1",
-    "@vue/cli-plugin-eslint": "^3.5.1",
-    "@vue/cli-service": "^3.5.1",
-    "@vue/eslint-config-airbnb": "^4.0.0",
-    "vue-template-compiler": "^2.6.9"
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-service": "^3.12.1",
+    "@vue/eslint-config-airbnb": "^4.0.1",
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,

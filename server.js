@@ -11,6 +11,7 @@ const sslRedirect = require('heroku-ssl-redirect');
 const { updateCountryData, updateAllCountries } = require('./functions.js');
 
 
+
 const fastify = prefastify({
   logger: {
     level: 'warn',
@@ -18,6 +19,9 @@ const fastify = prefastify({
   },
   trustProxy: true,
 });
+
+fastify.register(static, { root: path.join(__dirname, 'dist'), wildcard: false });
+
 fastify.register(mongodb, {
   // force to close the mongodb connection when app stopped
   // the default value is false
@@ -46,10 +50,9 @@ fastify.register(cookieSess, {
 })
 fastify.register(helmet);
 fastify.register(compress);
-fastify.register(static, { root: path.join(__dirname, 'dist'), wildcard: false });
 fastify.decorate('env', process.env);
 fastify.register(routesLoader, { paths: ['./routes/*.js'] });
-fastify.register(sslRedirect);
+//fastify.register(sslRedirect);
 
 
 fastify.get('/*', (req, reply) => {
