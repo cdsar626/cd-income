@@ -15,7 +15,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "country-list": "^2.2.0",
     "fastify": "^2.15.3",

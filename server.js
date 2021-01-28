@@ -41,8 +41,9 @@ fastify.ready(function() {
   }
 })
 fastify.register(cookieSess, {
-  key: fs.readFileSync(path.join(__dirname, 'key')),
+  key: fs.readFileSync(path.join(__dirname, 'secret-key')),
   cookie: {
+    path: '/',
     maxAge: 60 * 60 * 24 * 3, // 3 days in seconds
     HttpOnly: true,
     secure: process.env.NODE_ENV === "production",
